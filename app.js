@@ -11,8 +11,14 @@
         completed: false
       };
 
+      // I'm intentionally wrapping the Firebase $add and $remove methods
+      // here instead of calling them directly in my view
       this.addTodo = function () {
         this.todos.$add(angular.copy(this.newTodo));
+      };
+
+      this.finishTodo = function (todo) {
+        this.todos.$remove(todo);
       };
 
     });

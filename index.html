@@ -19,7 +19,7 @@
           <ul class="list-group">
             <li class="list-group-item" ng-repeat="todo in vm.todos">
               <div class="pull-right">
-                <span class="label label-warning" ng-click="vm.todos.$remove(todo);">X</span>
+                <span class="label label-warning" ng-click="vm.finishTodo(todo);">X</span>
               </div>
               {{todo.title}}
             </li>
